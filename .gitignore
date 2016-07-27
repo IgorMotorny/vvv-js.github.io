@@ -1,0 +1,8 @@
+.idea
+node_modules
+npm-debug.log
+*.swp
+*.swo
+bundle.js
+static/*
+templates
