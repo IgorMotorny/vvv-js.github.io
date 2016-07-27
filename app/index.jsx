@@ -5,7 +5,7 @@ import App from 'views/App'
 import 'styles/reset';
 
 ReactDOM.render(<Router history={browserHistory}>
-  <Router path="/" component={App}>
-  </Router>
+  <Route path="/" component={App}>
+  </Route>
   </Router>
   , document.getElementById('app'));
