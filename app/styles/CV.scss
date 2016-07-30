@@ -42,7 +42,6 @@
       }
     }
 
-
   }
   .social-button-box {
     width: 100%;
@@ -95,14 +94,48 @@
 
   .skill-list-wrapper {
     text-align: center;
+
     .skill-list {
       margin-top: 20px;
       margin-bottom: 20px;
       width: 710px;
       display: inline-block;
       padding: 20px 0;
+      text-align: left;
       h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
 
+      .skill-progress-bar-list {
+        width: 50%;
+        padding: 0 20px;
+        display: inline-block;
+        vertical-align: top;
+        .skill-item {
+          margin-bottom: 20px;
+          p {
+            margin-bottom: 5px;
+            span {
+              float: right;
+            }
+          }
+        }
+      }
+
+      .skill-image {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .additional-skills {
+        padding: 0 20px;
       }
     }
   }

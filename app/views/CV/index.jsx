@@ -15,6 +15,8 @@ import FlatButton from 'material-ui/FlatButton';
 import Facebook from 'images/facebook-logo.svg';
 import Linkedin from 'images/linkedin-logo.svg';
 import Github from 'images/github-logo.svg';
+import LinearProgress from 'material-ui/LinearProgress';
+import Chip from 'material-ui/Chip';
 
 import {indigo600, indigo900, grey800} from 'material-ui/styles/colors';
 
@@ -24,11 +26,23 @@ export default class CV extends React.Component {
   constructor(props) {
     super(props);
     this.state = {open: false};
+    this.styles = {
+      chip: {
+        margin: 4
+      },
+      wrapper: {
+        display: 'flex',
+        flexWrap: 'wrap',
+      }
+    };
+
   }
 
   handleToggle = () => this.setState({open: !this.state.open});
 
   handleClose = () => this.setState({open: false});
+
+
 
   render() {
     return (
@@ -104,7 +118,45 @@ export default class CV extends React.Component {
         <div className="skill-list-wrapper">
           <Paper style={{backgroundColor: '#f1f1f1'}} className="skill-list" zDepth={2}>
            <h1>Skills</h1>
-            
+            <div className="skill-progress-bar-list">
+              <div className="skill-item">
+                <p>React JS <span>90%</span></p>
+                <LinearProgress mode="determinate" value={90} />
+              </div>
+              <div className="skill-item">
+                <p>JavaScript <span>95%</span></p>
+                <LinearProgress mode="determinate" value={95} />
+              </div>
+              <div className="skill-item">
+                <p>ECMAScript  <span>80%</span></p>
+                <LinearProgress mode="determinate" value={80} />
+              </div>
+              <div className="skill-item">
+                <p>WebPack <span>75%</span></p>
+                <LinearProgress mode="determinate" value={75} />
+              </div>
+              <div className="skill-item">
+                <p>Asynchronous JavaScript<span>80%</span></p>
+                <LinearProgress mode="determinate" value={80} />
+              </div>
+            </div>
+            <div className="skill-image">
+              <img src="/app/images/SkillImage.jpg" alt=""/>
+            </div>
+            <div className="additional-skills" style={this.styles.wrapper}>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>HTML5</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>CSS3</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>Illustrator</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>PhotoShop</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>SASS</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>LESS</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>Bootstrap3</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>GIT</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>Angular2</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>Angular</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>Scrum</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>SQL</Chip>
+            </div>
           </Paper>
         </div>
 
