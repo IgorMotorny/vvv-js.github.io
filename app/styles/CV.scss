@@ -28,7 +28,7 @@
           margin-top: 5px;
           span {
             display: inline-block;
-            width: 80px;
+            width: 90px;
             font-weight: 600;
           }
         }
@@ -97,7 +97,6 @@
 
     .skill-list {
       margin-top: 20px;
-      margin-bottom: 20px;
       width: 710px;
       display: inline-block;
       padding: 20px 0;
@@ -136,6 +135,43 @@
 
       .additional-skills {
         padding: 0 20px;
+      }
+    }
+  }
+
+  .education-wrapper {
+    text-align: center;
+
+    .education-list {
+      width: 710px;
+      display: inline-block;
+      margin-top: 20px;
+      padding: 20px;
+
+      h1 {
+        margin-bottom: 20px;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      .university-box {
+        text-align: left;
+        display: flex;
+        align-content: center;
+
+        .university-logo {
+          display: inline-block;
+          vertical-align: top;
+        }
+        .university-info-box {
+          display: inline-block;
+          padding-left: 20px;
+          margin-top: 20px;
+          .university-name {
+            vertical-align: top;
+          }
+        }
       }
     }
   }
