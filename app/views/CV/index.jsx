@@ -54,6 +54,9 @@ export default class CV extends React.Component {
         paddingTop: 16,
         marginBottom: 12,
         fontWeight: 400,
+      },
+      card: {
+        backgroundColor: '#FAFAFA'
       }
     };
 
@@ -213,7 +216,7 @@ export default class CV extends React.Component {
         <div className="experience-wrapper">
           <Paper style={{backgroundColor: '#f1f1f1'}} className="experience-box" zDepth={2}>
             <h1>Experience</h1>
-            <Card className="work-card">
+          <Card style={this.styles.card} className="work-card">
               <CardHeader
                 title="Intellectus studio &#8212; Junior Front-end developer"
                 subtitle="September 2015 - February 2016"
@@ -221,10 +224,8 @@ export default class CV extends React.Component {
                 showExpandableButton={true}
               />
               <CardText expandable={true}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                HTML to PSD. Markup for landing, online stores, blogs.
+                DOM-manipulation using JQuery. Development of sliders, and other client components.
                 <div className="additional-skills" style={this.styles.wrapper}>
                   <Chip style={this.styles.chip} onTouchTap={()=>{}}>JavaScript</Chip>
                   <Chip style={this.styles.chip} onTouchTap={()=>{}}>JQuery</Chip>
@@ -239,7 +240,7 @@ export default class CV extends React.Component {
                 </div>
               </CardText>
             </Card>
-            <Card className="work-card">
+            <Card style={this.styles.card} className="work-card">
               <CardHeader
                 title="Intellectus studio &#8212; Middle Front-end developer"
                 subtitle="March 2016 - July 2016"
@@ -247,10 +248,9 @@ export default class CV extends React.Component {
                 showExpandableButton={true}
               />
               <CardText expandable={true}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                Development of hi-load React + Redux application.
+                Engineering the application architecture.
+                Development REACT-components
                 <div className="additional-skills" style={this.styles.wrapper}>
                   <Chip style={this.styles.chip} onTouchTap={()=>{}}>ReactJS</Chip>
                   <Chip style={this.styles.chip} onTouchTap={()=>{}}>Redux</Chip>
@@ -274,7 +274,7 @@ export default class CV extends React.Component {
               <Avatar className="university-logo" style={{backgroundColor: '#ffffff'}} size={80} src="/app/images/kpi-logo.png" />
               <div className="university-info-box">
                 <p className="university-name">NTUU 'KPI'</p>
-                <Subheader style={{lineHeight: 'auto', paddingLeft: '0'}}>Faculty of Program engineering, 2014 - present</Subheader>
+                <Subheader style={{lineHeight: 'auto', paddingLeft: '0'}}>Program engineering, 2014 - present</Subheader>
               </div>
             </div>
             <h2>Certificates</h2>
@@ -296,10 +296,8 @@ export default class CV extends React.Component {
                 ))}
               </GridList>
             </div>
-
           </Paper>
         </div>
-
 
         <Drawer
           docked={false}
@@ -307,9 +305,11 @@ export default class CV extends React.Component {
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
         >
-          <MenuItem onTouchTap={this.handleClose}>Menu Item</MenuItem>
+          <MenuItem onTouchTap={this.handleClose}>Main info</MenuItem>
           <Divider />
-          <MenuItem onTouchTap={this.handleClose}>Menu Item 2</MenuItem>
+        <MenuItem onTouchTap={this.handleClose}>Skills</MenuItem>
+      <MenuItem onTouchTap={this.handleClose}>Experience</MenuItem>
+    <MenuItem onTouchTap={this.handleClose}>Education</MenuItem>
         </Drawer>
       </div>
     );
