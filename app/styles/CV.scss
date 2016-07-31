@@ -3,6 +3,12 @@
 .CV {
   color: $font-color;
 
+  .i18nButton {
+    p {
+      line-height: 36px;
+    }
+  }
+
   .title-box {
     text-align: center;
     position: relative;

@@ -10,7 +10,7 @@ import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
 import RaisedButton from 'material-ui/RaisedButton';
 import Description from 'material-ui/svg-icons/action/description';
-import Link from 'material-ui/svg-icons/content/link';
+import LinkIcon from 'material-ui/svg-icons/content/link';
 import FlatButton from 'material-ui/FlatButton';
 import Facebook from 'images/facebook-logo.svg';
 import Linkedin from 'images/linkedin-logo.svg';
@@ -21,10 +21,11 @@ import {GridList, GridTile} from 'material-ui/GridList';
 import Subheader from 'material-ui/Subheader';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
-
 import {indigo600, indigo900, grey800} from 'material-ui/styles/colors';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
 
 import 'styles/CV';
+
 
 export default class CV extends React.Component {
   constructor(props) {
@@ -87,33 +88,43 @@ export default class CV extends React.Component {
       }]
   }
 
-  handleToggle = () => this.setState({open: !this.state.open});
-
-  handleClose = () => this.setState({open: false});
-
   handleChange = (value) => {
     this.setState({
       value: value,
     });
   };
 
+  scrollTo(id){
+    //let  = getElementByID(id);
+  }
+
+  componentDidMount() {
+    window.scrollTo(100,100);
+  }
+  componentWillUnmount() {
+
+  }
   render() {
     return (
       <div className="CV">
         <AppBar
-          title="CV App"
+        title=""
           zDepth={0}
+          iconElementLeft={<div></div>}
           iconElementRight={
           <IconMenu
-            iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+            iconButtonElement={<div></div>/*
+              <FloatingActionButton className='i18nButton' style={{marginRight: '20px'}} mini={true} zDepth={1}>
+                <p>RU</p>
+              </FloatingActionButton>*/}
             targetOrigin={{horizontal: 'right', vertical: 'top'}}
             anchorOrigin={{horizontal: 'right', vertical: 'top'}}>
-            <MenuItem primaryText="Refresh" />
-            <MenuItem primaryText="Help" />
-            <MenuItem primaryText="Sign out" />
+            <MenuItem primaryText="RU" />
+          <MenuItem primaryText="EN" />
+        <MenuItem primaryText="UA" />
           </IconMenu>
           }
-          onLeftIconButtonTouchTap={this.handleToggle}
+
         />
         <span className="background-blue"></span>
         <div className="main-info-paper">
@@ -267,7 +278,7 @@ export default class CV extends React.Component {
           </Paper>
         </div>
         <div className="education-wrapper">
-          <Paper style={{backgroundColor: '#f1f1f1'}} className="education-list" zDepth={2}>
+          <Paper  style={{backgroundColor: '#f1f1f1'}} className="education-list" zDepth={2}>
             <h1>Education</h1>
             <h2>University</h2>
             <div className="university-box">
@@ -289,7 +300,7 @@ export default class CV extends React.Component {
                     title={<b>{tile.title}</b>}
                     subtitle={<span>{tile.author}</span>}
                     titleBackground={'rgba(0, 188, 212, 0.8)'}
-                    actionIcon={<IconButton target="_blank" href={tile.href}><Link color="white" /></IconButton>}
+                    actionIcon={<IconButton target="_blank" href={tile.href}><LinkIcon color="white" /></IconButton>}
                   >
                     <img src={tile.img} />
                   </GridTile>
@@ -298,19 +309,6 @@ export default class CV extends React.Component {
             </div>
           </Paper>
         </div>
-
-        <Drawer
-          docked={false}
-          width={200}
-          open={this.state.open}
-          onRequestChange={(open) => this.setState({open})}
-        >
-          <MenuItem onTouchTap={this.handleClose}>Main info</MenuItem>
-          <Divider />
-        <MenuItem onTouchTap={this.handleClose}>Skills</MenuItem>
-      <MenuItem onTouchTap={this.handleClose}>Experience</MenuItem>
-    <MenuItem onTouchTap={this.handleClose}>Education</MenuItem>
-        </Drawer>
       </div>
     );
   }
