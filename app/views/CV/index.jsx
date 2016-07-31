@@ -145,6 +145,7 @@ export default class CV extends React.Component {
                   label="Download CV"
                   labelPosition="before"
                   primary={true}
+                  href={'/app/images/VuchkanVV.PDF'} 
                   icon={<Description />}
                 /></div>
               </div>
