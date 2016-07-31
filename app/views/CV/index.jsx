@@ -11,7 +11,6 @@ import Avatar from 'material-ui/Avatar';
 import RaisedButton from 'material-ui/RaisedButton';
 import Description from 'material-ui/svg-icons/action/description';
 import Link from 'material-ui/svg-icons/content/link';
-import FontIcon from 'material-ui/FontIcon';
 import FlatButton from 'material-ui/FlatButton';
 import Facebook from 'images/facebook-logo.svg';
 import Linkedin from 'images/linkedin-logo.svg';
@@ -19,8 +18,9 @@ import Github from 'images/github-logo.svg';
 import LinearProgress from 'material-ui/LinearProgress';
 import Chip from 'material-ui/Chip';
 import {GridList, GridTile} from 'material-ui/GridList';
-import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 import Subheader from 'material-ui/Subheader';
+import {Tabs, Tab} from 'material-ui/Tabs';
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 
 import {indigo600, indigo900, grey800} from 'material-ui/styles/colors';
 
@@ -29,7 +29,7 @@ import 'styles/CV';
 export default class CV extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {open: false};
+    this.state = {open: false, value: 'a'};
     this.styles = {
       chip: {
         margin: 4
@@ -48,6 +48,12 @@ export default class CV extends React.Component {
         height: 408,
         overflowY: 'auto',
         marginBottom: 0
+      },
+      headline: {
+        fontSize: 24,
+        paddingTop: 16,
+        marginBottom: 12,
+        fontWeight: 400,
       }
     };
 
@@ -81,6 +87,12 @@ export default class CV extends React.Component {
   handleToggle = () => this.setState({open: !this.state.open});
 
   handleClose = () => this.setState({open: false});
+
+  handleChange = (value) => {
+    this.setState({
+      value: value,
+    });
+  };
 
   render() {
     return (
@@ -194,7 +206,64 @@ export default class CV extends React.Component {
               <Chip style={this.styles.chip} onTouchTap={()=>{}}>Angular</Chip>
               <Chip style={this.styles.chip} onTouchTap={()=>{}}>Scrum</Chip>
               <Chip style={this.styles.chip} onTouchTap={()=>{}}>SQL</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>Linux</Chip>
             </div>
+          </Paper>
+        </div>
+        <div className="experience-wrapper">
+          <Paper style={{backgroundColor: '#f1f1f1'}} className="experience-box" zDepth={2}>
+            <h1>Experience</h1>
+            <Card className="work-card">
+              <CardHeader
+                title="Intellectus studio &#8212; Junior Front-end developer"
+                subtitle="September 2015 - February 2016"
+                actAsExpander={true}
+                showExpandableButton={true}
+              />
+              <CardText expandable={true}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+                Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                <div className="additional-skills" style={this.styles.wrapper}>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>JavaScript</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>JQuery</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>WordPress</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>HTML5</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>CSS3</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>Illustrator</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>PhotoShop</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>SASS</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>LESS</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>Bootstrap3</Chip>
+                </div>
+              </CardText>
+            </Card>
+            <Card className="work-card">
+              <CardHeader
+                title="Intellectus studio &#8212; Middle Front-end developer"
+                subtitle="March 2016 - July 2016"
+                actAsExpander={true}
+                showExpandableButton={true}
+              />
+              <CardText expandable={true}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+                Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                <div className="additional-skills" style={this.styles.wrapper}>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>ReactJS</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>Redux</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>ES6</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>HTML5</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>CSS3</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>SCSS</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>GIT</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>Scrum</Chip>
+                  <Chip style={this.styles.chip} onTouchTap={()=>{}}>UI/UX</Chip>
+                </div>
+              </CardText>
+            </Card>
           </Paper>
         </div>
         <div className="education-wrapper">
@@ -227,8 +296,10 @@ export default class CV extends React.Component {
                 ))}
               </GridList>
             </div>
+
           </Paper>
         </div>
+
 
         <Drawer
           docked={false}
