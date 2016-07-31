@@ -136,7 +136,7 @@ export default class CV extends React.Component {
               <Divider />
               <div className="main-info-contact">
                 <div className="contact-list">
-                  <div><span>Age</span> 18</div>
+                  <div><span>Age</span> 20</div>
                   <div><span>Experience</span> 1 year</div>
                   <div><span>Email</span> vuchkan.vladimir@gmail.com</div>
                   <div><span>Phone</span> +38 (066) 0375-901</div>
@@ -219,6 +219,8 @@ export default class CV extends React.Component {
               <Chip style={this.styles.chip} onTouchTap={()=>{}}>Angular2</Chip>
               <Chip style={this.styles.chip} onTouchTap={()=>{}}>Angular</Chip>
               <Chip style={this.styles.chip} onTouchTap={()=>{}}>Scrum</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>Lodash</Chip>
+            <Chip style={this.styles.chip} onTouchTap={()=>{}}>NPM</Chip>
               <Chip style={this.styles.chip} onTouchTap={()=>{}}>SQL</Chip>
               <Chip style={this.styles.chip} onTouchTap={()=>{}}>Linux</Chip>
             </div>
@@ -266,6 +268,8 @@ export default class CV extends React.Component {
                   <Chip style={this.styles.chip} onTouchTap={()=>{}}>ReactJS</Chip>
                   <Chip style={this.styles.chip} onTouchTap={()=>{}}>Redux</Chip>
                   <Chip style={this.styles.chip} onTouchTap={()=>{}}>ES6</Chip>
+                <Chip style={this.styles.chip} onTouchTap={()=>{}}>NPM</Chip>
+              <Chip style={this.styles.chip} onTouchTap={()=>{}}>Lodash</Chip>
                   <Chip style={this.styles.chip} onTouchTap={()=>{}}>HTML5</Chip>
                   <Chip style={this.styles.chip} onTouchTap={()=>{}}>CSS3</Chip>
                   <Chip style={this.styles.chip} onTouchTap={()=>{}}>SCSS</Chip>
