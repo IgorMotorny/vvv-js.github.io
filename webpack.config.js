@@ -25,7 +25,7 @@ var config = {
         test: /\.(jsx|js)$/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'react', 'stage-0', 'stage-1']
         }
       },
       {
