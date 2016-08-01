@@ -15,26 +15,17 @@ constructor(props) {
       {name: 'JavaScript', value: 95},
       {name: 'ECMAScript', value: 80},
       {name: 'WebPack', value: 75},
-      {name: 'Asynchronous JavaScript', value: 80}
+      {name: 'AJAX', value: 80}
     ]
   }
-  this.styles = {
-      chip: {
-          margin: 4
-      },
-      wrapper: {
-          display: 'flex',
-          flexWrap: 'wrap'
-      }
-  };
 }
   render() {
     return (
       <div className="skill-progress-bar-list">
         {
-          this.state.skills.map((skill)=>{
+          this.state.skills.map((skill, i)=>{
             return(
-              <div className="skill-item">
+              <div key={i} className="skill-item">
                   <p>{skill.name}
                       <span>{skill.value}%</span>
                   </p>
