@@ -6,7 +6,7 @@
             line-height: 36px;
         }
     }
-    
+
     .education-wrapper {
         text-align: center;
         .education-list {
@@ -40,25 +40,7 @@
             }
         }
     }
-    .experience-wrapper {
-        text-align: center;
-        .experience-box {
-            width: 710px;
-            display: inline-block;
-            margin: 20px 0 0;
-            padding: 20px;
-            h1 {
-                margin-bottom: 20px;
-            }
-            .work-card {
-                text-align: left;
-                margin-bottom: 20px;
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
+   
     .background-blue {
         position: absolute;
         background: $cyan500;

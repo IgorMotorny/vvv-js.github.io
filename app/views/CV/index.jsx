@@ -23,6 +23,7 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 
 import MainInfo from 'components/MainInfo';
 import SkillsList from 'components/SkillsList';
+import Experience from 'components/Experience';
 import 'styles/CV';
 import 'styles/grid';
 
@@ -91,63 +92,7 @@ export default class CV extends React.Component {
                 <span className="background-blue"></span>
                 <MainInfo/>
                 <SkillsList />
-                <div className="experience-wrapper">
-                    <Paper
-                        style={{
-                        backgroundColor: '#f1f1f1'
-                    }}
-                        className="experience-box"
-                        zDepth={2}>
-                        <h1>Experience</h1>
-                        <Card style={this.styles.card} className="work-card">
-                            <CardHeader
-                                title="Intellectus studio &#8212; Junior Front-end developer"
-                                subtitle="September 2015 - February 2016"
-                                actAsExpander={true}
-                                showExpandableButton={true}/>
-                            <CardText expandable={true}>
-                                HTML to PSD. Markup for landing, online stores, blogs. DOM-manipulation using
-                                JQuery. Development of sliders, and other client components.
-                                <div className="additional-skills" style={this.styles.wrapper}>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>JavaScript</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>JQuery</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>WordPress</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>HTML5</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>CSS3</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>Illustrator</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>PhotoShop</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>SASS</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>LESS</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>Bootstrap3</Chip>
-                                </div>
-                            </CardText>
-                        </Card>
-                        <Card style={this.styles.card} className="work-card">
-                            <CardHeader
-                                title="Intellectus studio &#8212; Middle Front-end developer"
-                                subtitle="March 2016 - July 2016"
-                                actAsExpander={true}
-                                showExpandableButton={true}/>
-                            <CardText expandable={true}>
-                                Development of hi-load React + Redux application. Engineering the application
-                                architecture. Development REACT-components
-                                <div className="additional-skills" style={this.styles.wrapper}>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>ReactJS</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>Redux</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>ES6</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>NPM</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>Lodash</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>HTML5</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>CSS3</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>SCSS</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>GIT</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>Scrum</Chip>
-                                    <Chip style={this.styles.chip} onTouchTap={() => {}}>UI/UX</Chip>
-                                </div>
-                            </CardText>
-                        </Card>
-                    </Paper>
-                </div>
+                <Experience />
                 <div className="education-wrapper">
                     <Paper
                         style={{
