@@ -29,37 +29,7 @@ constructor(props) {
               className="skill-list box"
               zDepth={2}>
               <h1>Skills</h1>
-              <div className="skill-progress-bar-list">
-                  <div className="skill-item">
-                      <p>React JS
-                          <span>90%</span>
-                      </p>
-                      <LinearProgress mode="determinate" value={90}/>
-                  </div>
-                  <div className="skill-item">
-                      <p>JavaScript
-                          <span>95%</span>
-                      </p>
-                      <LinearProgress mode="determinate" value={95}/>
-                  </div>
-                  <div className="skill-item">
-                      <p>ECMAScript
-                          <span>80%</span>
-                      </p>
-                      <LinearProgress mode="determinate" value={80}/>
-                  </div>
-                  <div className="skill-item">
-                      <p>WebPack
-                          <span>75%</span>
-                      </p>
-                      <LinearProgress mode="determinate" value={75}/>
-                  </div>
-                  <div className="skill-item">
-                      <p>Asynchronous JavaScript<span>80%</span>
-                      </p>
-                      <LinearProgress mode="determinate" value={80}/>
-                  </div>
-              </div>
+              <LinearSkillList />
               <div className="skill-image">
                   <img src="/app/images/SkillImage.jpg" alt=""/>
               </div>

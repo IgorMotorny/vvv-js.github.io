@@ -32,7 +32,7 @@ constructor(props) {
     return (
       <div className="skill-progress-bar-list">
         {
-          this.state.map((skill)=>{
+          this.state.skills.map((skill)=>{
             return(
               <div className="skill-item">
                   <p>{skill.name}
