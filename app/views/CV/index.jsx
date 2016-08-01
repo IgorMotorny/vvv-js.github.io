@@ -12,9 +12,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Description from 'material-ui/svg-icons/action/description';
 import LinkIcon from 'material-ui/svg-icons/content/link';
 import FlatButton from 'material-ui/FlatButton';
-import Facebook from 'images/facebook-logo.svg';
-import Linkedin from 'images/linkedin-logo.svg';
-import Github from 'images/github-logo.svg';
 import LinearProgress from 'material-ui/LinearProgress';
 import Chip from 'material-ui/Chip';
 import {GridList, GridTile} from 'material-ui/GridList';
@@ -24,7 +21,9 @@ import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import {indigo600, indigo900, grey800} from 'material-ui/styles/colors';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 
+import MainInfo from 'components/MainInfo';
 import 'styles/CV';
+import 'styles/grid';
 
 
 export default class CV extends React.Component {
@@ -127,61 +126,9 @@ export default class CV extends React.Component {
 
         />
         <span className="background-blue"></span>
-        <div className="main-info-paper">
-          <Paper style={{backgroundColor: '#f1f1f1'}} className="main-info-paper-inner" zDepth={2}>
-            <div className="title-box">
-              <Avatar size={80} src="/app/images/Avatar.jpeg" />
-              <h1>Vuchkan V.V.</h1>
-              <h2> JavaScript and Front-end Developer </h2>
-              <Divider />
-              <div className="main-info-contact">
-                <div className="contact-list">
-                  <div><span>Age</span> 20</div>
-                  <div><span>Experience</span> 1 year</div>
-                  <div><span>Email</span> vuchkan.vladimir@gmail.com</div>
-                  <div><span>Phone</span> +38 (066) 0375-901</div>
-                </div>
-                <div className="download-cv"> <RaisedButton
-                  label="Download CV"
-                  labelPosition="before"
-                  primary={true}
-                  href={'/app/images/VuchkanVV.PDF'} 
-                  icon={<Description />}
-                /></div>
-              </div>
-
-            </div>
-            <div className="social-button-box">
-                <FlatButton
-                  className="social-button"
-                  rippleColor={indigo900}
-                  style={{height: 60}}
-                  href="https://www.facebook.com/vuchkan.vladimir.9"
-                  secondary={true}
-                  icon={<div className="social-icon" dangerouslySetInnerHTML={{__html: Facebook}}></div>}
-                />
-                <FlatButton
-                  className="social-button"
-                  rippleColor={indigo600}
-                  style={{height: 60}}
-                  href="https://linkedin.com/in/vladimir-vuchkan-318907119"
-                  secondary={true}
-                  icon={<div className="social-icon" dangerouslySetInnerHTML={{__html: Linkedin}}></div>}
-                />
-              <FlatButton
-                className="social-button"
-                rippleColor={grey800}
-                style={{height: 60}}
-                href="https://github.com/vvv-js"
-                secondary={true}
-                icon={<div className="social-icon" dangerouslySetInnerHTML={{__html: Github}}></div>}
-              />
-            </div>
-          </Paper>
-        </div>
-
-        <div className="skill-list-wrapper">
-          <Paper style={{backgroundColor: '#f1f1f1'}} className="skill-list" zDepth={2}>
+        <MainInfo />
+        <div className="skill-list-wrapper box-wrapper">
+          <Paper style={{backgroundColor: '#f1f1f1'}} className="skill-list box" zDepth={2}>
            <h1>Skills</h1>
             <div className="skill-progress-bar-list">
               <div className="skill-item">
