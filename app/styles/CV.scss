@@ -1,128 +1,110 @@
 @import 'colors';
-
 .CV {
-  color: $font-color;
-
-  .i18nButton {
-    p {
-      line-height: 36px;
+    color: $font-color;
+    .i18nButton {
+        p {
+            line-height: 36px;
+        }
     }
-  }
-
-  .skill-list-wrapper {
-    text-align: center;
-
-    .skill-list {
-      margin-top: 20px;
-      width: 710px;
-      display: inline-block;
-      padding: 20px 0;
-      text-align: left;
-      h1 {
+    .skill-list-wrapper {
         text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .skill-progress-bar-list {
-        width: 50%;
-        padding: 0 20px;
-        display: inline-block;
-        vertical-align: top;
-        .skill-item {
-          margin-bottom: 20px;
-          p {
-            margin-bottom: 5px;
-            span {
-              float: right;
+        .skill-list {
+            margin-top: 20px;
+            width: 710px;
+            display: inline-block;
+            padding: 20px 0;
+            text-align: left;
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
             }
-          }
+            .skill-progress-bar-list {
+                width: 50%;
+                padding: 0 20px;
+                display: inline-block;
+                vertical-align: top;
+                .skill-item {
+                    margin-bottom: 20px;
+                    p {
+                        margin-bottom: 5px;
+                        span {
+                            float: right;
+                        }
+                    }
+                }
+            }
+            .skill-image {
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .additional-skills {
+                padding: 0 20px;
+            }
         }
-      }
-
-      .skill-image {
-        display: inline-block;
-        vertical-align: top;
-        width: 50%;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      .additional-skills {
-        padding: 0 20px;
-      }
     }
-  }
-
-  .education-wrapper {
-    text-align: center;
-
-    .education-list {
-      width: 710px;
-      display: inline-block;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 20px;
-
-      h1 {
-        margin-bottom: 20px;
-      }
-      h2 {
-        margin-bottom: 10px;
-      }
-
-      .university-box {
-        text-align: left;
-        display: flex;
-        align-content: center;
-
-        .university-logo {
-          display: inline-block;
-          vertical-align: top;
+    .education-wrapper {
+        text-align: center;
+        .education-list {
+            width: 710px;
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            h1 {
+                margin-bottom: 20px;
+            }
+            h2 {
+                margin-bottom: 10px;
+            }
+            .university-box {
+                text-align: left;
+                display: flex;
+                align-content: center;
+                .university-logo {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                .university-info-box {
+                    display: inline-block;
+                    padding-left: 20px;
+                    margin-top: 20px;
+                    .university-name {
+                        vertical-align: top;
+                    }
+                }
+            }
         }
-        .university-info-box {
-          display: inline-block;
-          padding-left: 20px;
-          margin-top: 20px;
-          .university-name {
-            vertical-align: top;
-          }
-        }
-      }
     }
-  }
-
-  .experience-wrapper {
-    text-align: center;
-
-    .experience-box {
-      width: 710px;
-      display: inline-block;
-      margin: 20px 0 0 0;
-      padding: 20px;
-      h1 {
-        margin-bottom: 20px;
-      }
-
-      .work-card {
-        text-align: left;
-        margin-bottom: 20px;
-
-        &:last-child {
-          margin-bottom: 0;
+    .experience-wrapper {
+        text-align: center;
+        .experience-box {
+            width: 710px;
+            display: inline-block;
+            margin: 20px 0 0;
+            padding: 20px;
+            h1 {
+                margin-bottom: 20px;
+            }
+            .work-card {
+                text-align: left;
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
-      }
     }
-  }
-
-  .background-blue {
-    position: absolute;
-    background: $cyan500;
-    top: 0;
-    width: 100%;
-    height: 350px;
-    z-index: 1;
-  }
+    .background-blue {
+        position: absolute;
+        background: $cyan500;
+        top: 0;
+        width: 100%;
+        height: 350px;
+        z-index: 1;
+    }
 }

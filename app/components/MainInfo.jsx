@@ -10,6 +10,7 @@ import Facebook from 'images/facebook-logo.svg';
 import Linkedin from 'images/linkedin-logo.svg';
 import Github from 'images/github-logo.svg';
 
+import SocialButtons from 'components/SocialButtons';
 import 'styles/MainInfo';
 
 export default class MainInfo extends React.Component {
@@ -17,7 +18,7 @@ export default class MainInfo extends React.Component {
   render() {
     return (
       <div className="main-info-paper box-wrapper">
-        <Paper style={{backgroundColor: '#f1f1f1'}} className="main-info-paper-inner box" zDepth={2}>
+        <Paper style={{backgroundColor: '#f1f1f1'}} className="box main-info-paper-inner" zDepth={2}>
           <div className="title-box">
             <Avatar size={80} src="/app/images/Avatar.jpeg" />
             <h1>Vuchkan V.V.</h1>
@@ -38,34 +39,8 @@ export default class MainInfo extends React.Component {
                 icon={<Description />}
               /></div>
             </div>
-
           </div>
-          <div className="social-button-box">
-              <FlatButton
-                className="social-button"
-                rippleColor={indigo900}
-                style={{height: 60}}
-                href="https://www.facebook.com/vuchkan.vladimir.9"
-                secondary={true}
-                icon={<div className="social-icon" dangerouslySetInnerHTML={{__html: Facebook}}></div>}
-              />
-              <FlatButton
-                className="social-button"
-                rippleColor={indigo600}
-                style={{height: 60}}
-                href="https://linkedin.com/in/vladimir-vuchkan-318907119"
-                secondary={true}
-                icon={<div className="social-icon" dangerouslySetInnerHTML={{__html: Linkedin}}></div>}
-              />
-            <FlatButton
-              className="social-button"
-              rippleColor={grey800}
-              style={{height: 60}}
-              href="https://github.com/vvv-js"
-              secondary={true}
-              icon={<div className="social-icon" dangerouslySetInnerHTML={{__html: Github}}></div>}
-            />
-          </div>
+          <SocialButtons />
         </Paper>
       </div>
     );
