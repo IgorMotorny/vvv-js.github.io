@@ -2,7 +2,7 @@ import React from 'react';
 import Paper from 'material-ui/Paper';
 import LinearProgress from 'material-ui/LinearProgress';
 import Chip from 'material-ui/Chip';
-
+import LinearSkillList from 'components/LinearSkillList';
 import 'styles/SkillsList';
 
 export default class SkillsList extends React.Component {
